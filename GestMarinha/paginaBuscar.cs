@@ -29,6 +29,44 @@ namespace GestMarinha
         {
             CarregarDadosDataGrid1();
             CarregarDadosDataGrid2();
+            EstilizarDataGridView(dataGridView1);
+            EstilizarDataGridView(dataGridView2);
+
+
+            // Estilização do DataGridView1
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.Navy;
+            dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dataGridView1.DefaultCellStyle.BackColor = Color.White;
+            dataGridView1.DefaultCellStyle.ForeColor = Color.Black;
+            dataGridView1.DefaultCellStyle.SelectionBackColor = Color.LightBlue;
+            dataGridView1.EnableHeadersVisualStyles = false;
+            dataGridView1.RowHeadersVisible = false;
+
+            // Estilização do DataGridView2
+            dataGridView2.ColumnHeadersDefaultCellStyle.BackColor = Color.Navy;
+            dataGridView2.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dataGridView2.DefaultCellStyle.BackColor = Color.White;
+            dataGridView2.DefaultCellStyle.ForeColor = Color.Black;
+            dataGridView2.DefaultCellStyle.SelectionBackColor = Color.LightBlue;
+            dataGridView2.EnableHeadersVisualStyles = false;
+            dataGridView2.RowHeadersVisible = false;
+
+            // Estilização dos Botões
+            button1.BackColor = Color.Navy;
+            button1.ForeColor = Color.White;
+            button1.FlatStyle = FlatStyle.Flat;
+
+            button2.BackColor = Color.Navy;
+            button2.ForeColor = Color.White;
+            button2.FlatStyle = FlatStyle.Flat;
+
+            // Estilização das TextBox
+            textBox1.Font = new Font("Arial", 10);
+            textBox2.Font = new Font("Arial", 10);
+
+            // Adicione espaçamento e ajuste o layout
+            textBox1.Margin = new Padding(10);
+            textBox2.Margin = new Padding(10);
         }
 
         private void CarregarDadosDataGrid1()
@@ -102,7 +140,7 @@ namespace GestMarinha
             try
             {
                 string termoPesquisa = textBox2.Text.Trim(); // Captura o texto da segunda TextBox
-                string query = "SELECT * FROM dbo.Tanques WHERE Descricao LIKE @pesquisa"; // Altere "Descricao" para a coluna desejada
+                string query = "SELECT * FROM dbo.Tanques WHERE Tipo LIKE @pesquisa"; // Altere "Descricao" para a coluna desejada
                 DataTable tabela = new DataTable();
 
                 cm.Connection = cn;
@@ -145,6 +183,41 @@ namespace GestMarinha
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
+        }
+
+        private void EstilizarDataGridView(DataGridView dgv)
+        {
+            // Cabeçalho
+            dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.Navy;
+            dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgv.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 12, FontStyle.Bold);
+            dgv.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgv.EnableHeadersVisualStyles = false;
+
+            // Linhas Alternadas
+            dgv.AlternatingRowsDefaultCellStyle.BackColor = Color.AliceBlue;
+
+            // Linhas e Células
+            dgv.DefaultCellStyle.BackColor = Color.White;
+            dgv.DefaultCellStyle.ForeColor = Color.Black;
+            dgv.DefaultCellStyle.Font = new Font("Arial", 10);
+            dgv.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            // Bordas e Linhas
+            dgv.BorderStyle = BorderStyle.FixedSingle; // Borda ao redor da grid
+            dgv.CellBorderStyle = DataGridViewCellBorderStyle.Single; // Linhas ao redor de cada célula
+            dgv.GridColor = Color.DarkGray; // Cor das linhas
+
+            // Seleção
+            dgv.DefaultCellStyle.SelectionBackColor = Color.LightSteelBlue;
+            dgv.DefaultCellStyle.SelectionForeColor = Color.Black;
+
+            // Remover cabeçalho de linha
+            dgv.RowHeadersVisible = false;
+
+            // Ajuste automático
+            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgv.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
         }
     }
 }

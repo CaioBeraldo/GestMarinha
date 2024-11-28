@@ -63,6 +63,16 @@ namespace GestMarinha.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _51631 {
+            get {
+                object obj = ResourceManager.GetObject("51631", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Cadastrar_Animais {
             get {
                 object obj = ResourceManager.GetObject("Cadastrar Animais", resourceCulture);
