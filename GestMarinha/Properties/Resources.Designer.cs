@@ -83,6 +83,46 @@ namespace GestMarinha.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Cadastrar_Animais__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Cadastrar Animais (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cadastrar_Animais__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Cadastrar Animais (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cadastrar_Animais__2_1 {
+            get {
+                object obj = ResourceManager.GetObject("Cadastrar Animais (2)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cadastrar_Animais1 {
+            get {
+                object obj = ResourceManager.GetObject("Cadastrar Animais1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap imageml {
             get {
                 object obj = ResourceManager.GetObject("imageml", resourceCulture);
