@@ -28,27 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxLogin = new System.Windows.Forms.TextBox();
+            this.textBoxSenha = new System.Windows.Forms.TextBox();
             this.lblLogin = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.labelLogin = new System.Windows.Forms.Label();
             this.labelSenha = new System.Windows.Forms.Label();
+            this.lblErro = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox1
+            // textBoxLogin
             // 
-            this.textBox1.Location = new System.Drawing.Point(444, 277);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(253, 20);
-            this.textBox1.TabIndex = 0;
+            this.textBoxLogin.Location = new System.Drawing.Point(444, 277);
+            this.textBoxLogin.Name = "textBoxLogin";
+            this.textBoxLogin.Size = new System.Drawing.Size(253, 20);
+            this.textBoxLogin.TabIndex = 0;
+            this.textBoxLogin.TextChanged += new System.EventHandler(this.textBoxLogin_TextChanged);
             // 
-            // textBox2
+            // textBoxSenha
             // 
-            this.textBox2.Location = new System.Drawing.Point(444, 353);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(253, 20);
-            this.textBox2.TabIndex = 1;
+            this.textBoxSenha.Location = new System.Drawing.Point(444, 353);
+            this.textBoxSenha.Name = "textBoxSenha";
+            this.textBoxSenha.PasswordChar = '*';
+            this.textBoxSenha.Size = new System.Drawing.Size(253, 20);
+            this.textBoxSenha.TabIndex = 1;
             // 
             // lblLogin
             // 
@@ -59,17 +62,16 @@
             this.lblLogin.Size = new System.Drawing.Size(145, 40);
             this.lblLogin.TabIndex = 2;
             this.lblLogin.Text = "Faça Login";
+            this.lblLogin.Click += new System.EventHandler(this.lblLogin_Click);
             // 
-            // button1
+            // btnLogin
             // 
-            this.button1.Location = new System.Drawing.Point(444, 409);
-            this.button1.Location = new System.Drawing.Point(513, 354);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(253, 24);
-            this.button1.Size = new System.Drawing.Size(190, 19);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnLogin.Location = new System.Drawing.Point(444, 410);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(253, 19);
+            this.btnLogin.TabIndex = 3;
+            this.btnLogin.Text = "Entrar";
+            this.btnLogin.UseVisualStyleBackColor = true;
             // 
             // labelLogin
             // 
@@ -80,6 +82,7 @@
             this.labelLogin.Size = new System.Drawing.Size(48, 20);
             this.labelLogin.TabIndex = 4;
             this.labelLogin.Text = "Login";
+            this.labelLogin.Click += new System.EventHandler(this.labelLogin_Click);
             // 
             // labelSenha
             // 
@@ -91,6 +94,15 @@
             this.labelSenha.TabIndex = 5;
             this.labelSenha.Text = "Senha";
             // 
+            // lblErro
+            // 
+            this.lblErro.AutoSize = true;
+            this.lblErro.Location = new System.Drawing.Point(551, 491);
+            this.lblErro.Name = "lblErro";
+            this.lblErro.Size = new System.Drawing.Size(38, 13);
+            this.lblErro.TabIndex = 6;
+            this.lblErro.Text = "ERRO";
+            // 
             // telaLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -98,17 +110,17 @@
             this.BackgroundImage = global::GestMarinha.Properties.Resources.Cadastrar_Animais;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1225, 643);
+            this.Controls.Add(this.lblErro);
             this.Controls.Add(this.labelSenha);
             this.Controls.Add(this.labelLogin);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.lblLogin);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxSenha);
+            this.Controls.Add(this.textBoxLogin);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "telaLogin";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -116,12 +128,13 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxLogin;
+        private System.Windows.Forms.TextBox textBoxSenha;
         private System.Windows.Forms.Label lblLogin;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label labelLogin;
         private System.Windows.Forms.Label labelSenha;
+        private System.Windows.Forms.Label lblErro;
     }
 }
 
