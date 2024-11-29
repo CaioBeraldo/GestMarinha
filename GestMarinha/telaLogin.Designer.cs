@@ -30,16 +30,16 @@
         {
             this.textBoxLogin = new System.Windows.Forms.TextBox();
             this.textBoxSenha = new System.Windows.Forms.TextBox();
-            this.lblLogin = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.labelLogin = new System.Windows.Forms.Label();
             this.labelSenha = new System.Windows.Forms.Label();
-            this.lblErro = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxLogin
             // 
-            this.textBoxLogin.Location = new System.Drawing.Point(444, 277);
+            this.textBoxLogin.Location = new System.Drawing.Point(471, 318);
             this.textBoxLogin.Name = "textBoxLogin";
             this.textBoxLogin.Size = new System.Drawing.Size(253, 20);
             this.textBoxLogin.TabIndex = 0;
@@ -47,62 +47,64 @@
             // 
             // textBoxSenha
             // 
-            this.textBoxSenha.Location = new System.Drawing.Point(444, 353);
+            this.textBoxSenha.Location = new System.Drawing.Point(471, 420);
             this.textBoxSenha.Name = "textBoxSenha";
             this.textBoxSenha.PasswordChar = '*';
             this.textBoxSenha.Size = new System.Drawing.Size(253, 20);
             this.textBoxSenha.TabIndex = 1;
             // 
-            // lblLogin
-            // 
-            this.lblLogin.AutoSize = true;
-            this.lblLogin.Font = new System.Drawing.Font("Yu Gothic UI Light", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogin.Location = new System.Drawing.Point(500, 176);
-            this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(145, 40);
-            this.lblLogin.TabIndex = 2;
-            this.lblLogin.Text = "Faça Login";
-            this.lblLogin.Click += new System.EventHandler(this.lblLogin_Click);
-            // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(444, 410);
+            this.btnLogin.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Location = new System.Drawing.Point(471, 480);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(253, 19);
+            this.btnLogin.Size = new System.Drawing.Size(253, 44);
             this.btnLogin.TabIndex = 3;
-            this.btnLogin.Text = "Entrar";
-            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Text = "ENTRAR";
+            this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click_1);
             // 
             // labelLogin
             // 
             this.labelLogin.AutoSize = true;
-            this.labelLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLogin.Location = new System.Drawing.Point(447, 243);
+            this.labelLogin.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.labelLogin.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLogin.Location = new System.Drawing.Point(471, 264);
             this.labelLogin.Name = "labelLogin";
-            this.labelLogin.Size = new System.Drawing.Size(48, 20);
+            this.labelLogin.Size = new System.Drawing.Size(75, 31);
             this.labelLogin.TabIndex = 4;
             this.labelLogin.Text = "Login";
+            this.labelLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelLogin.Click += new System.EventHandler(this.labelLogin_Click);
             // 
             // labelSenha
             // 
             this.labelSenha.AutoSize = true;
-            this.labelSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSenha.Location = new System.Drawing.Point(447, 312);
+            this.labelSenha.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.labelSenha.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelSenha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSenha.Location = new System.Drawing.Point(471, 364);
             this.labelSenha.Name = "labelSenha";
-            this.labelSenha.Size = new System.Drawing.Size(56, 20);
+            this.labelSenha.Size = new System.Drawing.Size(84, 31);
             this.labelSenha.TabIndex = 5;
             this.labelSenha.Text = "Senha";
+            this.labelSenha.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblErro
+            // pictureBox1
             // 
-            this.lblErro.AutoSize = true;
-            this.lblErro.Location = new System.Drawing.Point(551, 491);
-            this.lblErro.Name = "lblErro";
-            this.lblErro.Size = new System.Drawing.Size(38, 13);
-            this.lblErro.TabIndex = 6;
-            this.lblErro.Text = "ERRO";
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::GestMarinha.Properties.Resources.imagem_2024_11_28_220229455_Photoroom;
+            this.pictureBox1.Location = new System.Drawing.Point(12, -18);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1185, 279);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
             // 
             // telaLogin
             // 
@@ -111,11 +113,10 @@
             this.BackgroundImage = global::GestMarinha.Properties.Resources.Cadastrar_Animais;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1225, 643);
-            this.Controls.Add(this.lblErro);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.labelSenha);
             this.Controls.Add(this.labelLogin);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.lblLogin);
             this.Controls.Add(this.textBoxSenha);
             this.Controls.Add(this.textBoxLogin);
             this.DoubleBuffered = true;
@@ -123,6 +124,7 @@
             this.Name = "telaLogin";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.telaLogin_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,11 +134,10 @@
 
         private System.Windows.Forms.TextBox textBoxLogin;
         private System.Windows.Forms.TextBox textBoxSenha;
-        private System.Windows.Forms.Label lblLogin;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label labelLogin;
         private System.Windows.Forms.Label labelSenha;
-        private System.Windows.Forms.Label lblErro;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

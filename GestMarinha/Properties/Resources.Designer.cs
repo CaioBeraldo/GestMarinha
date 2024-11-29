@@ -123,6 +123,16 @@ namespace GestMarinha.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap imagem_2024_11_28_220229455_Photoroom {
+            get {
+                object obj = ResourceManager.GetObject("imagem_2024-11-28_220229455-Photoroom", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap imageml {
             get {
                 object obj = ResourceManager.GetObject("imageml", resourceCulture);

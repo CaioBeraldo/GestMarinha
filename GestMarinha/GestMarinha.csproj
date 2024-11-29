@@ -128,5 +128,8 @@
   <ItemGroup>
     <None Include="Resources\Cadastrar Animais %282%291.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagem_2024-11-28_220229455-Photoroom.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

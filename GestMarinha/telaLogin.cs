@@ -31,7 +31,7 @@ namespace GestMarinha
                 telaPrincipalForm.Show();
 
                 // Esconde o formulário de login
-                this.Hide();
+                this.Close();
             }
             else
             {
