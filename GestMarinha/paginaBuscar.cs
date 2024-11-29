@@ -31,6 +31,10 @@ namespace GestMarinha
             CarregarDadosDataGrid2();
             EstilizarDataGridView(dataGridView1);
             EstilizarDataGridView(dataGridView2);
+            dataGridView1.ReadOnly = true;
+            dataGridView2.ReadOnly = true;
+            textBox1.TextChanged += new EventHandler(TextBox1_TextChanged);
+            textBox2.TextChanged += new EventHandler(textBox2_TextChanged);
 
 
             // Estilização do DataGridView1
@@ -94,16 +98,19 @@ namespace GestMarinha
         {
             try
             {
-                string query2 = "SELECT * FROM dbo.Tanques"; // Substitua com sua tabela
-                DataTable tabela2 = new DataTable();
+                string termoPesquisa = textBox2.Text.Trim(); // Captura o texto da segunda TextBox
+                string query = "SELECT * FROM dbo.Tanques WHERE Tipo LIKE @pesquisa"; // Altere "Tipo" para a coluna desejada
+                DataTable tabela = new DataTable();
 
                 cm.Connection = cn;
-                cm.CommandText = query2;
+                cm.CommandText = query;
+                cm.Parameters.Clear();
+                cm.Parameters.AddWithValue("@pesquisa", "%" + termoPesquisa + "%"); // Pesquisa por qualquer parte do tipo
 
                 SqlDataAdapter da = new SqlDataAdapter(cm);
-                da.Fill(tabela2);
+                da.Fill(tabela);
 
-                dataGridView2.DataSource = tabela2;
+                dataGridView2.DataSource = tabela;
             }
             catch (Exception ex)
             {
@@ -122,7 +129,7 @@ namespace GestMarinha
                 cm.Connection = cn;
                 cm.CommandText = query;
                 cm.Parameters.Clear();
-                cm.Parameters.AddWithValue("@pesquisa", "%" + termoPesquisa + "%");
+                cm.Parameters.AddWithValue("@pesquisa", "%" + termoPesquisa + "%"); // Pesquisa por qualquer parte do nome
 
                 SqlDataAdapter da = new SqlDataAdapter(cm);
                 da.Fill(tabela);
@@ -169,6 +176,7 @@ namespace GestMarinha
             PesquisarDataGrid2(); // Executa a pesquisa no segundo DataGridView
         }
 
+
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
         }
@@ -177,12 +185,14 @@ namespace GestMarinha
         {
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void TextBox1_TextChanged(object sender, EventArgs e)
         {
+            PesquisarDataGrid1(); // Executa a pesquisa no primeiro DataGridView
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
+            PesquisarDataGrid2();
         }
 
         private void EstilizarDataGridView(DataGridView dgv)

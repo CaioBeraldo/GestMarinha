@@ -17,12 +17,36 @@ namespace GestMarinha
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void BtnLogin_Click(object sender, EventArgs e)
+        {
+            string loginCorreto = "admin";
+            string senhaCorreta = "admin";
+
+            if (textBoxLogin.Text == loginCorreto && textBoxSenha.Text == senhaCorreta)
+            {
+
+                telaPrincipal novoForm = new telaPrincipal();
+                novoForm.Show();
+                this.Hide();
+            }
+            else
+            {
+                lblErro.Text = "Login ou senha inválidos!";
+                lblErro.ForeColor = System.Drawing.Color.Red;
+            }
+        }
+
+        private void lblLogin_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void labelLogin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxLogin_TextChanged(object sender, EventArgs e)
         {
 
         }

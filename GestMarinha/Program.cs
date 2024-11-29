@@ -16,7 +16,7 @@ namespace GestMarinha
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new telaPrincipal());
+            Application.Run(new telaLogin());
         }
     }
 }
