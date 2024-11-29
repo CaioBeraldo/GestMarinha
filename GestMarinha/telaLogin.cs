@@ -24,15 +24,24 @@ namespace GestMarinha
 
             if (textBoxLogin.Text == loginCorreto && textBoxSenha.Text == senhaCorreta)
             {
+                // Criando o formulário principal
+                telaPrincipal telaPrincipalForm = new telaPrincipal();
 
-                telaPrincipal novoForm = new telaPrincipal();
-                novoForm.Show();
+                // Mostra a nova tela
+                telaPrincipalForm.Show();
+
+                // Esconde o formulário de login
                 this.Hide();
             }
             else
             {
-                lblErro.Text = "Login ou senha inválidos!";
-                lblErro.ForeColor = System.Drawing.Color.Red;
+                // Exibe mensagem de erro
+                MessageBox.Show(
+                    "Login ou senha inválidos!",
+                    "Erro",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
             }
         }
 
@@ -49,6 +58,18 @@ namespace GestMarinha
         private void textBoxLogin_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void telaLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLogin_Click_1(object sender, EventArgs e)
+        {
+            telaPrincipal TelaPrincipal = new telaPrincipal();
+            TelaPrincipal.Show();
+            
         }
     }
 }

@@ -72,6 +72,7 @@
             this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Entrar";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click_1);
             // 
             // labelLogin
             // 
@@ -121,6 +122,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "telaLogin";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.telaLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
