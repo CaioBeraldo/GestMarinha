@@ -37,12 +37,14 @@ namespace GestMarinha
         {
             paginaAdicionar pagina = new paginaAdicionar();
             pagina.Show();  
+           
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             paginaBuscar paginaBuscar = new paginaBuscar();
             paginaBuscar.Show();
+            
         }
     }
 }

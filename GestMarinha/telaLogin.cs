@@ -69,6 +69,7 @@ namespace GestMarinha
         {
             telaPrincipal TelaPrincipal = new telaPrincipal();
             TelaPrincipal.Show();
+            this.Hide();
             
         }
     }
